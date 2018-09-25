@@ -1,0 +1,356 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Sep 24 23:37:04 2018
+# Process ID: 480
+# Current directory: C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+# Log file: C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.runs/synth_1/top_module.vds
+# Journal file: C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_module.tcl -notrace
+Command: synth_design -top top_module -part xc7a100tcsg324-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7816 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 357.652 ; gain = 99.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_module' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/top_module.v:21]
+INFO: [Synth 8-6157] synthesizing module 'AISO' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/AISO.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'AISO' (1#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/AISO.v:21]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'pulse_gen' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/pulse_gen.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'pulse_gen' (2#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/pulse_gen.v:21]
+INFO: [Synth 8-226] default block is never used [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/debounce.v:97]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (3#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/debounce.v:21]
+INFO: [Synth 8-6157] synthesizing module 'pos_edge_detect' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/PED.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'pos_edge_detect' (4#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/PED.v:21]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/counter.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (5#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/counter.v:21]
+INFO: [Synth 8-6157] synthesizing module 'disp_cont' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/disp_cont.v:24]
+INFO: [Synth 8-6157] synthesizing module 'px_controller' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/p_con.v:19]
+INFO: [Synth 8-226] default block is never used [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/p_con.v:40]
+INFO: [Synth 8-226] default block is never used [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/p_con.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'px_controller' (6#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/p_con.v:19]
+INFO: [Synth 8-6157] synthesizing module 'mux_8_1' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/mux81.v:16]
+INFO: [Synth 8-226] default block is never used [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/mux81.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8_1' (7#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/mux81.v:16]
+INFO: [Synth 8-6157] synthesizing module 'hex_to_7seg' [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/hex_to_seg.v:18]
+INFO: [Synth 8-226] default block is never used [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/hex_to_seg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'hex_to_7seg' (8#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/hex_to_seg.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'disp_cont' (9#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/disp_cont.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'top_module' (10#1) [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/top_module.v:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 412.629 ; gain = 154.949
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 412.629 ; gain = 154.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 412.629 ; gain = 154.949
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 756.160 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 756.160 ; gain = 498.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 756.160 ; gain = 498.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 756.160 ; gain = 498.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sources_1/new/counter.v:35]
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'px_controller'
+INFO: [Synth 8-5544] ROM "a" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+                 iSTATE4 |                              101 |                              101
+                 iSTATE5 |                              110 |                              110
+                 iSTATE6 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'px_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 756.160 ; gain = 498.480
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module AISO 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module pos_edge_detect 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module counter 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module px_controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 756.160 ; gain = 498.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|debounce    | NS         | 32x3          | LUT            | 
+|top_module  | Db/NS      | 32x3          | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 756.160 ; gain = 498.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    14|
+|3     |LUT1   |     1|
+|4     |LUT2   |    17|
+|5     |LUT3   |     9|
+|6     |LUT4   |     1|
+|7     |LUT5   |    60|
+|8     |LUT6   |     7|
+|9     |FDCE   |    66|
+|10    |IBUF   |     4|
+|11    |OBUF   |    15|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+----------------+------+
+|      |Instance            |Module          |Cells |
++------+--------------------+----------------+------+
+|1     |top                 |                |   195|
+|2     |  AISO              |AISO            |     2|
+|3     |  Db                |debounce        |    57|
+|4     |    pg1             |pulse_gen_0     |    54|
+|5     |  PED               |pos_edge_detect |     3|
+|6     |  counter           |counter         |    47|
+|7     |  disp              |disp_cont       |    66|
+|8     |    p_con           |px_controller   |    13|
+|9     |    pulse_generator |pulse_gen       |    53|
++------+--------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 778.465 ; gain = 520.785
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 778.465 ; gain = 177.254
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 778.465 ; gain = 520.785
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 778.465 ; gain = 533.801
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.runs/synth_1/top_module.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 778.465 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 24 23:37:27 2018...

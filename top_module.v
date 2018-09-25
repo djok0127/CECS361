@@ -32,13 +32,8 @@ module top_module(reset, clk, inc, uphdl, anode, cathode);
                         .clk        (       clk),
                         .reset_sync (  rst_sync)
                        );
-	          
-  //  debounce         db(.clk        (       clk),
-  //                      .reset      (  rst_sync),
-   //                     .D_in       (       inc),
-   //                     .Q_out      (    inc_db)
-    //                   );
-    Debounce Db( .clk(clk), .rst(rst_sync), .sw(inc), .db(inc_db));
+	        //  (clk, reset, D_in, Q_out)
+    debounce Db( .clk(clk), .rst(rst_sync), .D_in(inc), .Q_out(inc_db));
                        
 	pos_edge_detect PED(.D_in       (    inc_db),    // Input
 	                    .clk        (       clk),    // Input

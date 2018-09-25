@@ -1,115 +1,83 @@
 `timescale 1ns / 1ps
-//****************************************************************//
-//  File name: Debounce.v                                             //
-//                                                                //
-//  Created by       Sunny Pham on 9/24/2018     .                //
-//  Copyright © 2018 Sunny Pham. All rights reserved.             //
-//                                                                //
-//                                                                //
-//  In submitting this file for class work at CSULB               //
-//  I am confirming that this is my work and the work             //
-//  of no one else. In submitting this code I acknowledge that    //
-//  plagiarism in student project work is subject to dismissal.   // 
-//  from the class                                                //
-//****************************************************************//
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    23:11:36 09/23/2018 
+// Design Name: 
+// Module Name:    debounce 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module debounce(clk, reset, D_in, Q_out);
+	
+    input       clk, reset;
+    input wire D_in;
+    output reg 	Q_out;
+	wire tick_r;
+	
+	pulse_generator pg1 (.clk(clk),
+						 .reset(reset),
+						 .flag(999_999),	// generate 10 ms clock pulse
+						 .tick(tick_r));
+	
+    
+   //***********************
+   // State register and
+   // Next_state Variables
+   //***********************
+   reg [2:0] PS;
+   reg [2:0] NS;
+    
+   //************************************************************************
+   // Next State Combinational Logic
+   // (Next State values can change anytime but will only be "clocked" below)
+   //************************************************************************
+   always @(PS or D_in or tick_r)
+       case  (PS)
+           3'b000 : if(D_in & tick_r == 1) NS = 3'b000; else NS = 3'b000; // use conditional
+           3'b001 : if(D_in & tick_r == 1) NS = 3'b010; else NS = 3'b000;
+           3'b010 : if(D_in & tick_r == 1) NS = 3'b011; else NS = 3'b000;
+           3'b011 : if(D_in & tick_r == 1) NS = 3'b100; else NS = 3'b000;
+           3'b100 : if(D_in & tick_r == 1) NS = 3'b101; else NS = 3'b100;
+           3'b101 : if(D_in & tick_r == 1) NS = 3'b110; else NS = 3'b100;
+           3'b110 : if(D_in & tick_r == 1) NS = 3'b111; else NS = 3'b100;
+           3'b111 : if(D_in & tick_r == 1) NS = 3'b000; else NS = 3'b100;
+   endcase
+   //*****************************************
+   // State Register Logic (Sequential Logic)
+   //*****************************************
+   always @ (posedge clk  or posedge reset)
+       if (reset == 1'b1)
+           PS <= 3'b0; //Got a reset so set state register to all 0's
+       else
+           PS <= NS;        // Got a posedge so update state register with next state
 
-// This Debounce in particular is taken from Pong Chu's example.
-module Debounce( clk, rst, sw, db);
+           
+   //******************************************************
+   // Output Combinational Logic
+   // (Outputs will only chnage when present state changes)
+   //******************************************************
+   always @(PS)
+     case  (PS)
+          3'b000 : Q_out = 1'b0;
+		  3'b001 : Q_out = 1'b0;
+		  3'b010 : Q_out = 1'b0;
+		  3'b011 : Q_out = 1'b0;
+		  3'b100 : Q_out = 1'b1;
+		  3'b101 : Q_out = 1'b1;
+		  3'b110 : Q_out = 1'b1;
+		  3'b111 : Q_out = 1'b1;
+		  default: Q_out = 1'b0;
+      endcase
 
-	input  wire	  clk, rst;
-	input  wire   sw;
-	
-	output reg	  db;
-	
-	reg     [2:0] present_state, next_state;
-
-	//State Declaration
-	localparam [2:0]
-				    zero    = 3'b000,
-					wait1_1 = 3'b001,
-					wait1_2 = 3'b010,
-					wait1_3 = 3'b011,
-					one     = 3'b100,
-					wait0_1 = 3'b101,
-					wait0_2 = 3'b110,
-					wait0_3 = 3'b111;
-					
-	// number of counter bits
-	localparam N = 19;
-	
-	// signal declaration
-	reg  [N-1:0] q_reg;
-	wire [N-1:0] q_next;
-	wire         tick;
-	reg          n_tick;
-	reg  [2:0]   state_reg, state_next;
-	
-	// counter to generate 10 ms tick
-	c_tick1 ct_1 (clk, rst, tick);
-	
-	// debouncing FSM
-	// state register
-	always @(posedge clk, posedge rst)
-		if(rst)
-			state_reg <= zero;
-		else 
-			state_reg <= state_next;
-		
-	// next state logic and output logic
-	always @(*)
-	begin 
-		state_next = state_reg;						// default state
-		db = 1'b0;										// default output of 0
-		n_tick = tick;
-		case (state_reg)
-			zero    : if(sw)
-							state_next = wait1_1;
-			wait1_1 : if(~sw)
-							state_next = zero;
-						 else
-							if (tick)
-								state_next = wait1_2;
-			wait1_2 : if(~sw)
-							state_next = zero;
-						 else
-							if(tick)
-								state_next = wait1_3;
-			wait1_3 : if(~sw)
-							state_next = zero;
-						 else
-							if(tick)
-								state_next = one;
-			one     : begin
-							db = 1'b1;
-							if(~sw)
-								state_next = wait0_1;
-						 end
-			wait0_1 : begin
-							db = 1'b1;
-							if(sw)
-								state_next = one;
-							else
-								if(tick)
-									state_next = wait0_2;
-						 end
-			wait0_2 : begin
-							db = 1'b1;
-							if(sw)
-								state_next = one;
-							else
-								if(tick)
-									state_next = wait0_3;
-						 end
-			wait0_3 : begin
-							db = 1'b1;
-							if(sw)
-								state_next = one;
-							else
-								if(tick)
-									state_next = zero;
-						 end
-			default : state_next = zero;
-		endcase
-	end
-			
 endmodule
