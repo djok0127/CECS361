@@ -1,23 +1,26 @@
-/************************************************
- * File Name: mux_8_1.v
- * Project: Lab05
- * Designer: Dong Jae Shin (014579836)
- * Email: djok0127@gmail.com
- * Rev. Date:  Mar. 12, 2018
- *
- *
- * Purpose: This module is an 8 to 1 multiplexer,
- *          which means this modules takes 8 inputs
- *          and outputs 1 output. The output is 
- *          depended on the 8 inputs.
- * Notes: 
- ************************************************/
+//****************************************************************//
+//  File name: mux_8_1      .v                                    //
+//                                                                //
+//  Created by       Dong Jae Shin on 9/24/2018     .             //
+//  Copyright © 2018 Dong Jae Shin. All rights reserved.          //
+//                                                                //
+//                                                                //
+//  In submitting this file for class work at CSULB               //
+//  I am confirming that this is my work and the work             //
+//  of no one else. In submitting this code I acknowledge that    //
+//  plagiarism in student project work is subject to dismissal.   // 
+//  from the class                                                //
+//****************************************************************//
 `timescale 1ns / 1ps
 module mux_8_1(S, Din, Dout);
     input       [2:0] S;     // 3-bit Select
     input      [31:0] Din;   // 8 x 4-bit data inputs (16 bits)
     output reg  [3:0] Dout;  // 4-bit data output
-
+    
+    //////////////////////////////////////////////////////////////////
+    // This combinational block changes the output depending on the //  
+    // 3 bit select and outputs 4 bit data output                   //
+    //////////////////////////////////////////////////////////////////
     always @(*)
         case (S)
             3'b000:  Dout = Din[3 : 0];  // D0
@@ -28,6 +31,6 @@ module mux_8_1(S, Din, Dout);
             3'b101:  Dout = Din[23:20];  // D5
             3'b110:  Dout = Din[27:24];  // D6
             3'b111:  Dout = Din[31:28];  // D7
-            default: Dout = Din[3:0];  // D0
+            default: Dout = Din[3:0];    // D0
         endcase
 endmodule

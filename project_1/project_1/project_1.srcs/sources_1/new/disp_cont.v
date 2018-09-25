@@ -1,25 +1,16 @@
-/*****************************************************
- * File Name: disp_cont.v
- * Project: Lab08 
- * Designer: Dong Jae Shin (014579836)
- * Email: djok0127@gmail.com
- * Rev. Date:  May 7, 2018
- *
- *
- * Purpose: This module is the top module for
- *          displaying the hex value on to the
- *          LED. This module makes the LED to turn
- *          on one by one that refreshes every 2.08ms
- *          and display the hex value converted on
- *          to the seven segment display.
- * 
- * Notes: The refresh rate is calculated by dividing 1
- *        by the frequency necessary(1/480hz).
- *        480Hz is calculated by multiplying 60Hz with 8,
- *        because there are 8 7-segment displays
- *        in total. Therefore, 480Hz will give
- *        scanned display of 60Hz.
- *****************************************************/
+//****************************************************************//
+//  File name: disp_cont.v                                        //
+//                                                                //
+//  Created by       Dong Jae Shin on 9/24/2018     .             //
+//  Copyright © 2018 Dong Jae Shin. All rights reserved.          //
+//                                                                //
+//                                                                //
+//  In submitting this file for class work at CSULB               //
+//  I am confirming that this is my work and the work             //
+//  of no one else. In submitting this code I acknowledge that    //
+//  plagiarism in student project work is subject to dismissal.   // 
+//  from the class                                                //
+//****************************************************************//
 `timescale 1ns / 1ps
 module disp_cont(
     input clk,
@@ -43,25 +34,25 @@ module disp_cont(
     // initialization of the modules and putting them together into one.
     //****************************************************************** 
     pulse_gen pulse_generator(.clk(clk),			// Input
-												.reset(reset),		// Input
-												.flag(104_166),	// Input
-												.tick(tick)			// Output
-												);		
+							  .reset(reset),		// Input
+							  .flag(104_166),	    // Input
+							  .tick(tick)			// Output
+							 );		
      
-    px_controller p_con( .clk(clk),  			// Input
-                                 .reset(reset),       // Input
-								 .tick(tick),			// Input
-                                 .a(a),               // Output
-                                 .seg_sel(seg_sel)    // Output
-											);
+    px_controller       p_con(.clk(clk),  			// Input
+                              .reset(reset),        // Input
+							  .tick(tick),			// Input
+                              .a(a),                // Output
+                              .seg_sel(seg_sel)     // Output
+							 );
   
-    mux_8_1             mux81( .S(seg_sel),         // Input  
-                                 .Din({16'b0,seg}),           // Input  
-                                 .Dout(hex_wire)      // Output 
-                               );
+    mux_8_1             mux81(.S(seg_sel),          // Input  
+                              .Din({16'b0,seg}),    // Input  
+                              .Dout(hex_wire)       // Output 
+                             );
   
-    hex_to_7seg      hex_to_seg( .hex(hex_wire),   	// Input
-                                 .cathodes(cathodes)  // Output
-                               );
+    hex_to_7seg    hex_to_seg( .hex(hex_wire),   	// Input
+                               .cathodes(cathodes)  // Output
+                             );
 
 endmodule

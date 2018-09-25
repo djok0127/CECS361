@@ -1,24 +1,26 @@
-/************************************************
- * File Name: hex_to_7seg.v
- * Project: Lab08 
- * Designer: Steven Cagle (014055026)
- * Email: Steven.Cagle@csulb.student.edu
- * Rev. Date:  May 7, 2018
- *
- *
- * Purpose: 
- *      This module inputs a hexidecimal digit over a 4-bit input
- *      wire, since storing a hex digit requires 4-bits (2^4=16),
- *      and outputs a binary number in which every bit represents
- *      a cathode (pixel) on a 7-segment display.
- *
- * Notes: 
- ************************************************/
+//****************************************************************//
+//  File name: hex_to_7seg.v                                      //
+//                                                                //
+//  Created by       Dong Jae Shin on 9/24/2018     .             //
+//  Copyright © 2018 Dong Jae Shin. All rights reserved.          //
+//                                                                //
+//                                                                //
+//  In submitting this file for class work at CSULB               //
+//  I am confirming that this is my work and the work             //
+//  of no one else. In submitting this code I acknowledge that    //
+//  plagiarism in student project work is subject to dismissal.   // 
+//  from the class                                                //
+//****************************************************************//
 `timescale 1ns / 1ps
 module hex_to_7seg(hex, cathodes);
     input      [3:0] hex;      // Binary form of hex digit
     output reg [6:0] cathodes; // 7-segment pixels to turn on/off
-
+    
+    ///////////////////////////////////////////////////////////////////////
+    // This combinational block deteremines which cathodes to turn on    //
+    // when hex digit is inputted. The cathode is negative logic;        //
+    // therefore cathode is off when the bit is equal to 1               //
+    ///////////////////////////////////////////////////////////////////////
     always @(*)
 	 begin
         case (hex)

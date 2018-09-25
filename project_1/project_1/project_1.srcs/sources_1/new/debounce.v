@@ -1,23 +1,17 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    23:11:36 09/23/2018 
-// Design Name: 
-// Module Name:    debounce 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+//****************************************************************//
+//  File name: debounce.v                                         //
+//                                                                //
+//  Created by       Dong Jae Shin on 9/24/2018     .             //
+//  Copyright © 2018 Dong Jae Shin. All rights reserved.          //
+//                                                                //
+//                                                                //
+//  In submitting this file for class work at CSULB               //
+//  I am confirming that this is my work and the work             //
+//  of no one else. In submitting this code I acknowledge that    //
+//  plagiarism in student project work is subject to dismissal.   // 
+//  from the class                                                //
+//****************************************************************//
 module debounce(clk, reset, D_in, Q_out);
 	
     input       clk, reset;
@@ -44,7 +38,7 @@ module debounce(clk, reset, D_in, Q_out);
    //************************************************************************
    always @(*)  begin
        case  ({PS, D_in, tick_r})
-           5'b000_0_0 : NS = 3'b000; // use conditional
+           5'b000_0_0 : NS = 3'b000;
            5'b000_0_1 : NS = 3'b000;
            5'b000_1_0 : NS = 3'b001;
            5'b000_1_1 : NS = 3'b001;
@@ -52,7 +46,7 @@ module debounce(clk, reset, D_in, Q_out);
            5'b001_0_1 : NS = 3'b000;
            5'b001_1_0 : NS = 3'b001;
            5'b001_1_1 : NS = 3'b010;
-           5'b010_0_0 : NS = 3'b000; // use conditional
+           5'b010_0_0 : NS = 3'b000;
            5'b010_0_1 : NS = 3'b000;
            5'b010_1_0 : NS = 3'b010;
            5'b010_1_1 : NS = 3'b011;
@@ -62,7 +56,7 @@ module debounce(clk, reset, D_in, Q_out);
            5'b011_1_1 : NS = 3'b100;
            
            5'b100_0_0 : NS = 3'b101;
-           5'b100_0_1 : NS = 3'b101; // use conditional
+           5'b100_0_1 : NS = 3'b101; 
            5'b100_1_0 : NS = 3'b100;
            5'b100_1_1 : NS = 3'b100;
            5'b101_0_0 : NS = 3'b101;
@@ -70,7 +64,7 @@ module debounce(clk, reset, D_in, Q_out);
            5'b101_1_0 : NS = 3'b100;
            5'b101_1_1 : NS = 3'b100;
            5'b110_0_0 : NS = 3'b110;
-           5'b110_0_1 : NS = 3'b111; // use conditional
+           5'b110_0_1 : NS = 3'b111; 
            5'b110_1_0 : NS = 3'b100;
            5'b110_1_1 : NS = 3'b100;
            5'b111_0_0 : NS = 3'b111;
@@ -84,7 +78,7 @@ module debounce(clk, reset, D_in, Q_out);
    //*****************************************
    always @ (posedge clk  or posedge reset) begin
        if (reset == 1'b1)
-           PS <= 3'b0; //Got a reset so set state register to all 0's
+           PS <= 3'b0;      //Got a reset so set state register to all 0's
        else
            PS <= NS;        // Got a posedge so update state register with next state
     end

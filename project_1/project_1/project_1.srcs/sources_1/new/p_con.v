@@ -1,20 +1,16 @@
-/************************************************************
- * File Name: px_controller.v
- * Project: Lab05
- * Designer: Dong Jae Shin (014579836)
- * Email: djok0127@gmail.com
- * Rev. Date:  Mar. 12, 2018
- *
- *
- * Purpose: This module takes divided clock input
- *          (480Hz) and cycles through each anodes
- *          to be turned on, one at a time.
- *
- * Notes: This module is using the moore state
- *        machine to cycle through each anodes,
- *        which means that the output is only
- *        dependent on the present state.
- ************************************************************/
+//****************************************************************//
+//  File name: px_controller.v                                    //
+//                                                                //
+//  Created by       Dong Jae Shin on 9/24/2018     .             //
+//  Copyright © 2018 Dong Jae Shin. All rights reserved.          //
+//                                                                //
+//                                                                //
+//  In submitting this file for class work at CSULB               //
+//  I am confirming that this is my work and the work             //
+//  of no one else. In submitting this code I acknowledge that    //
+//  plagiarism in student project work is subject to dismissal.   // 
+//  from the class                                                //
+//****************************************************************//
 `timescale 1ns / 1ps
 module px_controller(clk, reset, tick, a, seg_sel);
     input        clk, reset,tick;
@@ -56,10 +52,10 @@ module px_controller(clk, reset, tick, a, seg_sel);
         if (reset == 1'b1)
             PS = 3'b0; //Got a reset so set state register to all 0's
         else
-            if(tick == 1'b1)
+            if(tick == 1'b1)    // changes to the next anode on every 60 hz for each anode(480hz)
                 PS = NS;        // Got a posedge so update state register with next state
             else
-                PS = PS;
+                PS = PS;        // if it is before 60 hz, do not update the state
             
     //******************************************************
     // Output Combinational Logic
