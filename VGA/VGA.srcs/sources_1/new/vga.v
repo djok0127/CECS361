@@ -53,7 +53,9 @@ module vga_sync(clk, reset, h_sync, v_sync, video_on, h_count, v_count);
 	       if(h_end) h_count = 10'b0;
 	       else      dh = h_count + 10'b1;
 	       if(v_end) v_count = 10'b0;
-	       else      dv = v_count + 10'b1;
+	       else      
+	           if(h_end)
+	               dv = v_count + 10'b1;
 	   end
 	end
  
@@ -62,6 +64,8 @@ module vga_sync(clk, reset, h_sync, v_sync, video_on, h_count, v_count);
         if(reset)begin
             v_count <= 10'b0;
             h_count <= 10'b0;
+            dh <= 10'b0;
+            dv <= 10'b0;
         end else begin
             v_count <= dv;
             h_count <= dh;
