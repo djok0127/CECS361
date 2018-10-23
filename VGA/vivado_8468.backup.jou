@@ -1,0 +1,93 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Oct 18 00:52:46 2018
+# Process ID: 8468
+# Current directory: C:/Users/Chris/Documents/GitHub/CECS361/VGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3004 C:\Users\Chris\Documents\GitHub\CECS361\VGA\VGA.xpr
+# Log file: C:/Users/Chris/Documents/GitHub/CECS361/VGA/vivado.log
+# Journal file: C:/Users/Chris/Documents/GitHub/CECS361/VGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.xpr
+update_compile_order -fileset sources_1
+file mkdir C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_sim.v w ]
+add_files -fileset sim_1 C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_sim.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top vga_sync [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top vga_sync_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_sim.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_sim.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v w ]
+add_files -fileset sim_1 C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top vga_sync_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+add_bp {C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v} 42
+remove_bps -file {C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v} -line 42
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+close_sim
+launch_simulation
+source vga_sync_tb.tcl
+update_compile_order -fileset sim_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+launch_simulation
+source vga_sync_tb.tcl
+close_sim

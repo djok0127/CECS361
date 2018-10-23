@@ -1,0 +1,13 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+t = 36.0 ns count = 0000
+t = 46.0 ns count = 0001
+t = 56.0 ns count = 0000
+t = 66.0 ns count = 0001
+t = 76.0 ns count = 0000
+t = 86.0 ns count = ffff
+t = 96.0 ns count = ffff
+t = 106.0 ns count = fffe
+t = 116.0 ns count = 0000
+t = 126.0 ns count = 0001
+$finish called at time : 126 ns : File "C:/Users/Chris/Documents/GitHub/CECS361/project_1/project_1/project_1.srcs/sim_1/new/counter_test.v" Line 101

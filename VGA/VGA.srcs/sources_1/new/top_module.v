@@ -1,39 +1,44 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/18/2018 03:25:41 PM
-// Design Name: 
-// Module Name: top_module
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+/****************************** C E C S  3 6 1 ******************************
+ * 
+ * File Name:  vga_sync
+ *
+ * Created by       Dong Jae Shin 10/23/2018
+ * Copyright © 2018 Dong Jae Shin. All rights reserved.
+ *
+ * purpose: top_module of the VGA project.
+ *          Puts together the vga sync module and the color module.
+ *          
+ *
+ * In submitting this file for class work at CSULB
+ * I am confirming that this is my work and the work
+ * of no one else. In submitting this code I acknowledge that
+ * plagiarism in student project work is subject to dismissal
+ * from the class.
+ *         
+ ****************************************************************************/
 module top_module(clk, reset, sw, color, h_sync, v_sync);
     
+    // initialized inputs
     input        clk, reset;
     input [11:0] sw;
+    
+    // initialize wires
     wire       video_on;
     wire [9:0] v_count, h_count;    
+    
+    // initialize outputs
     output h_sync, v_sync;
     output [11:0] color;
-     
-    vga_sync vs(.clk(clk), 
-                .reset(reset), 
-                .h_sync(h_sync), 
-                .v_sync(v_sync),
-                .video_on(video_on), 
-                .v_count(v_count),
-                .h_count(h_count)
+    
+    // call the vga_sync module 
+    vga_sync vs(.clk(clk),          // input
+                .reset(reset),      // input
+                .h_sync(h_sync),    // output
+                .v_sync(v_sync),    // output
+                .video_on(video_on),// output
+                .v_count(v_count),  // output
+                .h_count(h_count)   // output
                 );
                 
 	//assign the color of the screen based on switch inputs
