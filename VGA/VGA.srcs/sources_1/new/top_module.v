@@ -17,11 +17,11 @@
  * from the class.
  *         
  ****************************************************************************/
-module top_module(clk, reset, sw, color, h_sync, v_sync);
+module top_module(clk, reset, SW, color, h_sync, v_sync);
     
     // initialized inputs
     input        clk, reset;
-    input [11:0] sw;
+    input [11:0] SW;
     
     // initialize wires
     wire       video_on;
@@ -29,7 +29,7 @@ module top_module(clk, reset, sw, color, h_sync, v_sync);
     
     // initialize outputs
     output h_sync, v_sync;
-    output [11:0] color;
+    output wire [11:0] color;
     
     // call the vga_sync module 
     vga_sync vs(.clk(clk),          // input
@@ -40,8 +40,9 @@ module top_module(clk, reset, sw, color, h_sync, v_sync);
                 .v_count(v_count),  // output
                 .h_count(h_count)   // output
                 );
-                
-	//assign the color of the screen based on switch inputs
-    assign color = (video_on) ? sw : 12'b0;
+     
+            
+	// assign the color of the screen based on switch inputs
+    assign color = (video_on) ? SW : 12'b0;
                 
 endmodule
