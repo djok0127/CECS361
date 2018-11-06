@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/top_module_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module_tb

@@ -24,7 +24,8 @@ module top_module(clk, reset, SW, color, h_sync, v_sync);
     input [11:0] SW;
     
     // initialize wires
-    wire       video_on;
+    wire       video_on; // if it is output wire the testbench shows
+                                // if it is wire it gets high impedance
     wire [9:0] v_count, h_count;    
     
     // initialize outputs
@@ -40,8 +41,7 @@ module top_module(clk, reset, SW, color, h_sync, v_sync);
                 .v_count(v_count),  // output
                 .h_count(h_count)   // output
                 );
-     
-            
+          
 	// assign the color of the screen based on switch inputs
     assign color = (video_on) ? SW : 12'b0;
                 

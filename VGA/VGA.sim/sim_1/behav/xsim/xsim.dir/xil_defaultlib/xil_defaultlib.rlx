@@ -3,6 +3,7 @@
 Jun 14 2018
 20:41:02
 C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
-C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v,1540271541,verilog,,,,vga_sync_tb,,,,,,,,
-C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/top_module.v,1540267917,verilog,,C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v,,top_module,,,,,,,,
-C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/vga.v,1540271576,verilog,,C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/top_module.v,,vga_sync,,,,,,,,
+,,,,,,top_module_tb,,,,,,,,
+C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v,1540282910,verilog,,C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/top_module_tb.v,,vga_sync_tb,,,,,,,,
+C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/top_module.v,1540441093,verilog,,C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sim_1/new/vga_sync_tb.v,,top_module,,,,,,,,
+C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/vga.v,1540440550,verilog,,C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/top_module.v,,vga_sync,,,,,,,,

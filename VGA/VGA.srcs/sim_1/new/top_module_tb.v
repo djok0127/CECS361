@@ -36,7 +36,8 @@ module top_module_tb;
                        .SW(sw), 
                        .color(color), 
                        .h_sync(h_sync), 
-                       .v_sync(v_sync));
+                       .v_sync(v_sync)
+                       );
                        
    initial begin
    // start the test bench by setting the clock to 0
