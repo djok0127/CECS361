@@ -27,35 +27,25 @@ module top_module_tb;
     
     // outputs from the DUT
     wire       video_on, h_sync, v_sync;
-    wire [11:0] color;
-    reg [11:0] sw;
-    
+    wire [2:0] rgb;
 
- top_module top_module(.clk(clk),
-                       .reset(reset), 
-                       .SW(sw), 
-                       .color(color), 
-                       .h_sync(h_sync), 
-                       .v_sync(v_sync)
-                       );
-                       
-   initial begin
+    top_module tm(.clk(clk), 
+                  .reset(reset), 
+                  .rgb(rgb), 
+                  .h_sync(h_sync), 
+                  .v_sync(v_sync)
+                  );
+initial begin
    // start the test bench by setting the clock to 0
    // reset to 1
    clk = 0;
    reset = 1;
-   sw = 12'b0;
    
-   // change the timeformat to milliseconds
-   $timeformat(-3,2,"ms", 10);
+   #50 // wait for 50 ns
+   reset = 0;
    
-   // wait for 20ns and set the reset to 0
-   #20 reset = 0;
-   // loop the cloop forever and not it every 2 ns
-   forever begin 
-        
-       #2 clk = !clk;
-       #2 sw = sw + 12'b1;
-   end   
+   
+   //ToDo: does he want the tick as an output to use that signal to check others?
+   
 end
 endmodule

@@ -19,7 +19,7 @@
  ****************************************************************************/
 
 
-module vga_sync(clk, reset, h_sync, v_sync, video_on, v_count, h_count );
+module vga_sync(clk, reset, h_sync, v_sync, video_on, v_count, h_count, tick );
     
     // initialization of input
 	input 		      clk, reset;
@@ -28,12 +28,12 @@ module vga_sync(clk, reset, h_sync, v_sync, video_on, v_count, h_count );
 	output reg           video_on;
     output reg [9:0]  v_count, h_count;	
     output wire       h_sync, v_sync;
-
+    output wire       tick;
     // initialization of regs and wires
 	reg [1:0] count, d;
 	
 
-	wire tick, h_end, v_end;
+	wire h_end, v_end;
 	
    	//////////////////////////////////////////
 	// This combinational block adds 1 bit  //

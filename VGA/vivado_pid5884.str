@@ -1,0 +1,719 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 5884
+License: Customer
+
+Current time: 	Mon Nov 05 23:03:20 PST 2018
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 18 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Chris
+User home directory: C:/Users/Chris
+User working directory: C:/Users/Chris/Documents/GitHub/CECS361/VGA
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Chris/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Chris/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Chris/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Chris/Documents/GitHub/CECS361/VGA/vivado.log
+Vivado journal file location: 	C:/Users/Chris/Documents/GitHub/CECS361/VGA/vivado.jou
+Engine tmp dir: 	C:/Users/Chris/Documents/GitHub/CECS361/VGA/.Xil/Vivado-5884-DESKTOP-2ECK0P9
+
+Xilinx Environment Variables
+----------------------------
+NO_XILINX_DATA_LICENSE: HIDDEN
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	194 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 604 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Chris\Documents\GitHub\CECS361\VGA\VGA.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.xpr 
+// [GUI Memory]: 63 MB (+63419kb) [00:00:05]
+// [Engine Memory]: 507 MB (+379636kb) [00:00:05]
+// Tcl Message: open_project C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 72 MB (+6614kb) [00:00:07]
+// [Engine Memory]: 559 MB (+28890kb) [00:00:07]
+// [GUI Memory]: 87 MB (+11868kb) [00:00:07]
+// [Engine Memory]: 588 MB (+213kb) [00:00:07]
+// [GUI Memory]: 99 MB (+7931kb) [00:00:07]
+// Project name: VGA; location: C:/Users/Chris/Documents/GitHub/CECS361/VGA; part: xc7k70tfbv676-1
+dismissDialog("Open Project"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 41 MB. Current time: 11/5/18 11:03:21 PM PST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false); // B (D, ck)
+selectCodeEditor("vga.v", 277, 164); // ce (w, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, vga_sync_tb (vga_sync_tb.v)]", 7, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, vga_sync_tb (vga_sync_tb.v)]", 7, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top vga_sync_tb [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 619 MB (+1790kb) [00:00:46]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_module_tb (top_module_tb.v)]", 7, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_module_tb (top_module_tb.v)]", 7, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, vga_sync_tb (vga_sync_tb.v)]", 6, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, vga_sync_tb (vga_sync_tb.v)]", 6, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("vga_sync_tb.v", 334, 207); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 631 MB. GUI used memory: 44 MB. Current time: 11/5/18 11:04:01 PM PST
+selectCodeEditor("vga_sync_tb.v", 367, 425); // ce (w, ck)
+selectCodeEditor("vga_sync_tb.v", 371, 392); // ce (w, ck)
+selectCodeEditor("vga_sync_tb.v", 374, 339); // ce (w, ck)
+selectCodeEditor("vga_sync_tb.v", 251, 404); // ce (w, ck)
+selectCodeEditor("vga_sync_tb.v", 185, 440); // ce (w, ck)
+selectCodeEditor("vga_sync_tb.v", 184, 415); // ce (w, ck)
+selectCodeEditor("vga_sync_tb.v", 187, 377); // ce (w, ck)
+// [GUI Memory]: 104 MB (+210kb) [00:02:06]
+// Elapsed time: 188 seconds
+selectCodeEditor("vga_sync_tb.v", 151, 449); // ce (w, ck)
+selectCodeEditor("vga_sync_tb.v", 233, 451); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true); // B (D, ck) - Node
+// Elapsed time: 314 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a (o, c)
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "pixel_gen"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 16 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/pixel_gen.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.srcs/sources_1/new/pixel_gen.v 
+// I (ck): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// HMemoryUtils.trashcanNow. Engine heap size: 651 MB. GUI used memory: 45 MB. Current time: 11/5/18 11:12:51 PM PST
+// [Engine Memory]: 651 MB (+1793kb) [00:09:40]
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pixel_gen (pixel_gen.v)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pixel_gen (pixel_gen.v)]", 3, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("pixel_gen.v", 228, 96); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 194, 402); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("pixel_gen.v", 228, 425); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 265, 362); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 259, 368); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 256, 379); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 20 seconds
+selectCodeEditor("pixel_gen.v", 411, 342); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 413, 410); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 523, 391); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 524, 390, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 42 seconds
+selectCodeEditor("pixel_gen.v", 419, 369); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 392, 387); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("pixel_gen.v", 1149, 308); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("pixel_gen.v", 404, 487); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 413, 417); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 433, 401); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 248, 411); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 256, 408); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 271, 401); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 114, 376); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 105, 401); // ce (w, ck)
+// Elapsed time: 95 seconds
+selectCodeEditor("pixel_gen.v", 574, 340); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 410, 429); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 46 seconds
+selectCodeEditor("pixel_gen.v", 197, 405); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 259, 412); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 326, 392); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 24 seconds
+selectCodeEditor("pixel_gen.v", 360, 375); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 355, 380); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 347, 382); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectCodeEditor("pixel_gen.v", 405, 425); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 406, 411); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 411, 380); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 432, 451); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 442, 436); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 18 seconds
+selectCodeEditor("pixel_gen.v", 324, 442); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("pixel_gen.v", 383, 343); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("pixel_gen.v", 345, 416); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 334, 432); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 100 seconds
+selectCodeEditor("pixel_gen.v", 219, 375); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 212, 410); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 216, 440); // ce (w, ck)
+// Elapsed time: 116 seconds
+typeControlKey((HResource) null, "pixel_gen.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "pixel_gen.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 35 seconds
+selectCodeEditor("pixel_gen.v", 337, 444); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 449, 487); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 455, 471); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("pixel_gen.v", 500, 462); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 511, 460); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 520, 454); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 520, 454); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 295, 449); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 327, 431); // ce (w, ck)
+// Elapsed time: 48 seconds
+selectCodeEditor("pixel_gen.v", 105, 271); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 137 seconds
+selectCodeEditor("pixel_gen.v", 149, 319); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 139, 357); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 154, 353); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 55 seconds
+selectCodeEditor("pixel_gen.v", 304, 91); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 318, 77); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 27 seconds
+selectCodeEditor("pixel_gen.v", 69, 47); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 72, 66); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("pixel_gen.v", 227, 89); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("pixel_gen.v", 244, 70); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 42 seconds
+selectCodeEditor("pixel_gen.v", 532, 346); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 614, 262); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 481, 411); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 478, 394); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 412, 265); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 398, 296); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 389, 325); // ce (w, ck)
+// Elapsed time: 225 seconds
+selectCodeEditor("pixel_gen.v", 171, 129); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 100, 99); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 112, 106); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 112, 109, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 77 seconds
+selectCodeEditor("pixel_gen.v", 412, 402); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 406, 429); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 413, 417); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 172 seconds
+selectCodeEditor("pixel_gen.v", 413, 417); // ce (w, ck)
+// Elapsed time: 36 seconds
+selectCodeEditor("pixel_gen.v", 368, 329); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 402, 406); // ce (w, ck)
+// Elapsed time: 92 seconds
+selectCodeEditor("pixel_gen.v", 251, 372); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 292, 346); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 319, 327); // ce (w, ck)
+// Elapsed time: 40 seconds
+selectCodeEditor("pixel_gen.v", 148, 325); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 235, 298); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 233, 306); // ce (w, ck)
+// Elapsed time: 28 seconds
+typeControlKey((HResource) null, "pixel_gen.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 670 MB. GUI used memory: 46 MB. Current time: 11/5/18 11:42:52 PM PST
+// Elapsed time: 267 seconds
+selectCodeEditor("pixel_gen.v", 485, 404); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 477, 414); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 481, 416, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 75 seconds
+selectCodeEditor("pixel_gen.v", 601, 472); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 627, 447); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 643, 430); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 30 seconds
+selectCodeEditor("pixel_gen.v", 513, 264); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 421, 299); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 382, 330); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 248, 323); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 270, 285); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 237, 406); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 237, 413); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("pixel_gen.v", 384, 228); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("pixel_gen.v", 120, 270); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 115, 280); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("pixel_gen.v", 82, 147); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 149, 221); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 51, 231); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 51, 231, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "pixel_gen.v", 'c'); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 452, 239); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("top_module.v", 462, 186); // ce (w, ck)
+selectCodeEditor("top_module.v", 336, 389); // ce (w, ck)
+selectCodeEditor("top_module.v", 325, 397); // ce (w, ck)
+selectCodeEditor("top_module.v", 450, 390); // ce (w, ck)
+selectCodeEditor("top_module.v", 393, 400); // ce (w, ck)
+typeControlKey((HResource) null, "top_module.v", 'v'); // ce (w, ck)
+// Elapsed time: 23 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 210 seconds
+selectCodeEditor("top_module.v", 538, 245); // ce (w, ck)
+selectCodeEditor("top_module.v", 184, 359); // ce (w, ck)
+// Elapsed time: 37 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4DDR_Master.xdc]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4DDR_Master.xdc]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module.v", 5); // k (j, ck)
+selectCodeEditor("top_module.v", 384, 204); // ce (w, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("top_module.v", 164, 158); // ce (w, ck)
+selectCodeEditor("top_module.v", 231, 96); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 48 seconds
+selectCodeEditor("top_module.v", 383, 277); // ce (w, ck)
+selectCodeEditor("top_module.v", 399, 313); // ce (w, ck)
+selectCodeEditor("top_module.v", 355, 394); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top_module.v", 486, 451); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("top_module.v", 335, 393); // ce (w, ck)
+selectCodeEditor("top_module.v", 305, 421); // ce (w, ck)
+// Elapsed time: 40 seconds
+selectCodeEditor("top_module.v", 379, 143); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v)]", 1); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), pg : pixel_gen (pixel_gen.v)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), pg : pixel_gen (pixel_gen.v)]", 3, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_module (top_module.v), vs : vga_sync (vga.v)]", 2, false); // B (D, ck)
+selectCodeEditor("vga.v", 516, 239); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("vga.v", 197, 222); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("vga.v", 90, 315); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("vga.v", 517, 80); // ce (w, ck)
+selectCodeEditor("vga.v", 493, 78); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module.v", 5); // k (j, ck)
+selectCodeEditor("top_module.v", 176, 371); // ce (w, ck)
+selectCodeEditor("top_module.v", 363, 453); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top_module.v", 203, 153); // ce (w, ck)
+selectCodeEditor("top_module.v", 217, 215); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pixel_gen.v", 4); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("pixel_gen.v", 333, 305); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("pixel_gen.v", 410, 240); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("pixel_gen.v", 442, 86); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga_sync_tb.v", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("vga_sync_tb.v", 391, 159); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module_tb.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga.v", 1); // k (j, ck)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module.v", 5); // k (j, ck)
+selectCodeEditor("top_module.v", 228, 453); // ce (w, ck)
+selectCodeEditor("top_module.v", 457, 441); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("top_module.v", 457, 441); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top_module.v", 144, 466); // ce (w, ck)
+selectCodeEditor("top_module.v", 209, 372); // ce (w, ck)
+selectCodeEditor("top_module.v", 208, 447); // ce (w, ck)
+selectCodeEditor("top_module.v", 146, 434); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 45 seconds
+selectCodeEditor("top_module.v", 168, 435); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top_module.v", 237, 441); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("top_module.v", 197, 474); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top_module.v", 278, 459); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 85 seconds
+selectCodeEditor("top_module.v", 156, 356); // ce (w, ck)
+selectCodeEditor("top_module.v", 230, 408); // ce (w, ck)
+selectCodeEditor("top_module.v", 145, 314); // ce (w, ck)
+selectCodeEditor("top_module.v", 151, 313); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("top_module.v", 434, 223); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top_module.v", 315, 180); // ce (w, ck)
+selectCodeEditor("top_module.v", 233, 142); // ce (w, ck)
+selectCodeEditor("top_module.v", 227, 251); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pixel_gen.v", 4); // k (j, ck)
+selectCodeEditor("pixel_gen.v", 273, 415); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 290, 403); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 98, 367); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("pixel_gen.v", 393, 200); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 403, 377); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("pixel_gen.v", 568, 264); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 464, 236); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 175, 244); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 300, 142); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectCodeEditor("pixel_gen.v", 450, 197); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 470, 278); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 482, 318); // ce (w, ck)
+selectCodeEditor("pixel_gen.v", 580, 368); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 671 MB. GUI used memory: 45 MB. Current time: 11/6/18 12:00:02 AM PST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys4DDR_Master.xdc", 6); // k (j, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 8, 124); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("Nexys4DDR_Master.xdc", 4, 214); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Nexys4DDR_Master.xdc", 430, 207); // ce (w, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 2, 388); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Nexys4DDR_Master.xdc", 1, 109); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module.v", 5); // k (j, ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys4DDR_Master.xdc", 6); // k (j, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("Nexys4DDR_Master.xdc", 6, 218); // ce (w, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 5, 41); // ce (w, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 5, 130); // ce (w, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 5, 215); // ce (w, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 578, 45); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("Nexys4DDR_Master.xdc", 4, 304); // ce (w, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 566, 300); // ce (w, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 556, 305); // ce (w, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 563, 302); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys4DDR_Master.xdc", 6); // k (j, ck)
+selectCodeEditor("Nexys4DDR_Master.xdc", 737, 211); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module.v", 5); // k (j, ck)
+selectCodeEditor("top_module.v", 183, 141); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 301 seconds
+selectCodeEditor("top_module.v", 660, 296); // ce (w, ck)
+selectCodeEditor("top_module.v", 660, 296, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 756 seconds
+selectCodeEditor("top_module.v", 407, 166); // ce (w, ck)
+// Elapsed time: 30 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 2); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_module_tb (top_module_tb.v), top_module : top_module (top_module.v)]", 12, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_module_tb (top_module_tb.v)]", 11, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_module_tb (top_module_tb.v)]", 11, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 11 seconds
+selectCodeEditor("top_module_tb.v", 201, 257); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 217, 337); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 139, 393); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 57, 411); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 60, 407, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top_module_tb.v", 368, 433); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 397, 416); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 409, 453); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 413, 444); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 421, 438); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module.v", 5); // k (j, ck)
+selectCodeEditor("top_module.v", 534, 73); // ce (w, ck)
+selectCodeEditor("top_module.v", 401, 266); // ce (w, ck)
+selectCodeEditor("top_module.v", 358, 263); // ce (w, ck)
+typeControlKey((HResource) null, "top_module.v", 'c'); // ce (w, ck)
+selectCodeEditor("top_module.v", 481, 5); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_module_tb.v", 2); // k (j, ck)
+selectCodeEditor("top_module_tb.v", 342, 337); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 334, 362); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 387, 297); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 292, 201); // ce (w, ck)
+typeControlKey((HResource) null, "top_module_tb.v", 'v'); // ce (w, ck)
+// Elapsed time: 16 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 29 seconds
+selectCodeEditor("top_module_tb.v", 397, 410); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 245, 442); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top_module_tb.v", 187, 454); // ce (w, ck)
+// Elapsed time: 44 seconds
+selectCodeEditor("top_module_tb.v", 492, 156); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 417, 341); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 426, 315); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("top_module_tb.v", 567, 218); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 453, 283); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 255, 355); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("top_module_tb.v", 236, 338); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 218, 357); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 149 seconds
+selectCodeEditor("top_module_tb.v", 470, 380); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 440, 424); // ce (w, ck)
+// Elapsed time: 38 seconds
+selectCodeEditor("top_module_tb.v", 578, 342); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top_module_tb.v", 874, 468); // ce (w, ck)
+selectCodeEditor("top_module_tb.v", 502, 204); // ce (w, ck)

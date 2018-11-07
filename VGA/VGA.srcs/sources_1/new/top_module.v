@@ -17,20 +17,24 @@
  * from the class.
  *         
  ****************************************************************************/
-module top_module(clk, reset, SW, color, h_sync, v_sync);
+module top_module(clk, reset, rgb, h_sync, v_sync);
     
     // initialized inputs
     input        clk, reset;
-    input [11:0] SW;
     
     // initialize wires
     wire       video_on; // if it is output wire the testbench shows
                                 // if it is wire it gets high impedance
     wire [9:0] v_count, h_count;    
+    reg [2:0] rgb_r;
+    wire [2:0] rgb_next;
+    wire tick;
     
     // initialize outputs
     output h_sync, v_sync;
-    output wire [11:0] color;
+    output wire [2:0] rgb;
+    
+    
     
     // call the vga_sync module 
     vga_sync vs(.clk(clk),          // input
@@ -39,10 +43,21 @@ module top_module(clk, reset, SW, color, h_sync, v_sync);
                 .v_sync(v_sync),    // output
                 .video_on(video_on),// output
                 .v_count(v_count),  // output
-                .h_count(h_count)   // output
+                .h_count(h_count),   // output
+                .tick(tick)         // output
                 );
-          
-	// assign the color of the screen based on switch inputs
-    assign color = (video_on) ? SW : 12'b0;
-                
+    
+    // call the pixel gen module
+    pixel_gen pg(.pixel_x(h_count), 
+                 .pixel_y(v_count), 
+                 .video_on(video_on), 
+                 .rgb(rgb_next)
+                 );
+     
+    always @(posedge clk, reset) begin
+        if(tick) rgb_r <= rgb_next;
+        else rgb_r <= 2'b0;
+    end
+    
+    assign rgb = rgb_r;
 endmodule
