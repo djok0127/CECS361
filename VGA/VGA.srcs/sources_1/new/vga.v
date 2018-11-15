@@ -29,6 +29,7 @@ module vga_sync(clk, reset, h_sync, v_sync, video_on, v_count, h_count, tick );
     output reg [9:0]  v_count, h_count;	
     output wire       h_sync, v_sync;
     output wire       tick;
+    
     // initialization of regs and wires
 	reg [1:0] count, d;
 	
@@ -80,7 +81,7 @@ module vga_sync(clk, reset, h_sync, v_sync, video_on, v_count, h_count, tick );
         end
     end
     
-    always @(posedge clk , posedge reset)begin
+    always @(posedge clk or posedge reset)begin
         if(reset) v_count <= 10'b0; else
         if( tick ) begin 
             if(h_end) begin

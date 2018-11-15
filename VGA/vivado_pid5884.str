@@ -717,3 +717,5 @@ selectCodeEditor("top_module_tb.v", 578, 342); // ce (w, ck)
 // TclEventType: DG_GRAPH_GENERATED
 selectCodeEditor("top_module_tb.v", 874, 468); // ce (w, ck)
 selectCodeEditor("top_module_tb.v", 502, 204); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 671 MB. GUI used memory: 44 MB. Current time: 11/6/18 12:30:02 AM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 671 MB. GUI used memory: 44 MB. Current time: 11/6/18 1:00:03 AM PST
