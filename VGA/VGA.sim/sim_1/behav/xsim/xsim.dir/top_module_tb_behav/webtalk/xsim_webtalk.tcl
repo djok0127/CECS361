@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.sim/sim_1/behav/xsim/xsim.dir/top_module_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Wed Nov 14 23:06:44 2018" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Nov 14 23:49:59 2018" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2258646" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "27b76d737d3e5bfeb8c15d13c3d83d10" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "497fdbc1f0fd48ac81a272704858f1e4" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "60" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "62" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz" -context "user_environment"
@@ -36,7 +36,7 @@ webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Processes -value "40" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "5" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "0.51_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "52764_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1237676496 -regid "211475819_0_0_060" -xml C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.sim/sim_1/behav/xsim/xsim.dir/top_module_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.sim/sim_1/behav/xsim/xsim.dir/top_module_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.sim/sim_1/behav/xsim/xsim.dir/top_module_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "0.47_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "52732_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3132871171 -regid "211475819_0_0_060" -xml C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.sim/sim_1/behav/xsim/xsim.dir/top_module_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.sim/sim_1/behav/xsim/xsim.dir/top_module_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.sim/sim_1/behav/xsim/xsim.dir/top_module_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

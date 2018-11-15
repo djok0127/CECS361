@@ -32,7 +32,7 @@ module top_module(clk, reset, rgb, h_sync, v_sync, video_on);
     // initialize outputs
     output h_sync, v_sync;
     output reg [2:0] rgb;
-        
+    
     // call the vga_sync module 
     vga_sync vs(.clk(clk),          // input
                 .reset(reset),      // input
@@ -52,7 +52,7 @@ module top_module(clk, reset, rgb, h_sync, v_sync, video_on);
                  );
      
     always @(posedge clk or posedge reset) begin
-        if(clk) rgb <= rgb_next;
+        if(tick) rgb <= rgb_next;
         else if(reset) rgb <= 2'b0;
     end
 endmodule

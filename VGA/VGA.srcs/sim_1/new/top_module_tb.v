@@ -1,25 +1,22 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/23/2018 07:13:39 PM
-// Design Name: 
-// Module Name: top_module_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
+/****************************** C E C S  3 6 1 ******************************
+ * 
+ * File Name:  top_module_tb.v
+ *
+ * Created by       Dong Jae Shin 11/14/2018
+ * Copyright © 2018 Dong Jae Shin. All rights reserved.
+ *
+ * purpose: top_module test bench of the VGA project.
+ *          this verilog module checks the requirments for the project
+ *          using the self checking test bench
+ *
+ * In submitting this file for class work at CSULB
+ * I am confirming that this is my work and the work
+ * of no one else. In submitting this code I acknowledge that
+ * plagiarism in student project work is subject to dismissal
+ * from the class.
+ *         
+ ****************************************************************************/
 module top_module_tb;
 
     // inputs to the DUT
