@@ -54,9 +54,9 @@ module top_module(clk, reset, rgb, h_sync, v_sync);
                  .rgb(rgb_next)
                  );
      
-    always @(posedge clk, reset) begin
+    always @(posedge clk or posedge reset) begin
         if(tick) rgb_r <= rgb_next;
-        else rgb_r <= 2'b0;
+        else if(reset) rgb_r <= 2'b0;
     end
     
     assign rgb = rgb_r;
