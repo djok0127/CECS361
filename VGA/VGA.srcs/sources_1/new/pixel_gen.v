@@ -15,8 +15,6 @@
  * from the class.
  *         
  ****************************************************************************/
-
-
 module pixel_gen( pixel_x, pixel_y, video_on, rgb);
    input wire [9:0] pixel_x, pixel_y;
    input wire video_on;

@@ -17,8 +17,6 @@
  * from the class.
  *         
  ****************************************************************************/
-
-
 module vga_sync(clk, reset, h_sync, v_sync, video_on, v_count, h_count, tick );
     
     // initialization of input
@@ -32,8 +30,6 @@ module vga_sync(clk, reset, h_sync, v_sync, video_on, v_count, h_count, tick );
     
     // initialization of regs and wires
 	reg [1:0] count, d;
-	
-
 	wire h_end, v_end;
 	
    	//////////////////////////////////////////
@@ -90,7 +86,4 @@ module vga_sync(clk, reset, h_sync, v_sync, video_on, v_count, h_count, tick );
             end
         end
     end
-
-    
-
 endmodule
