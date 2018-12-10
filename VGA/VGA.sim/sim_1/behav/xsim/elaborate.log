@@ -7,6 +7,7 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AISO
 Compiling module xil_defaultlib.vga_sync
 Compiling module xil_defaultlib.pixel_gen
 Compiling module xil_defaultlib.top_module

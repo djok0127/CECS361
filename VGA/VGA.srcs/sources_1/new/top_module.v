@@ -17,25 +17,31 @@
  * from the class.
  *         
  ****************************************************************************/
-module top_module(clk, reset, rgb, h_sync, v_sync, video_on);
+module top_module(clk, reset, btn_down, btn_up, rgb, h_sync, v_sync, video_on);
     
     // initialized inputs
-    input        clk, reset;
+    input        clk, reset, btn_down, btn_up;
     
     // initialize wires
     output       video_on;
 
     wire [9:0] v_count, h_count;    
     wire [2:0] rgb_next;
-    wire tick;
+    wire tick, rst_sync;
     
     // initialize outputs
     output h_sync, v_sync;
     output reg [2:0] rgb;
     
+    // Asynchronous In Synchronous Out
+    AISO reset_sync(.reset(reset),
+                    .clk(clk),
+                    .reset_sync(rst_sync)
+                    );
+                    
     // call the vga_sync module 
     vga_sync vs(.clk(clk),          // input
-                .reset(reset),      // input
+                .reset(rst_sync),      // input
                 .h_sync(h_sync),    // output
                 .v_sync(v_sync),    // output
                 .video_on(video_on),// output
@@ -46,8 +52,12 @@ module top_module(clk, reset, rgb, h_sync, v_sync, video_on);
     
     // call the pixel gen module
     pixel_gen pg(.pixel_x(h_count),     // input 
-                 .pixel_y(v_count),     // input 
+                 .pixel_y(v_count),     // input
+                 .btn_up(btn_up),       // input
+                 .btn_down(btn_down),   // input
                  .video_on(video_on),   // input
+                 .reset(rst_sync),      // input
+                 .clk(clk),             // input
                  .rgb(rgb_next)         // output
                  );
      
