@@ -25,16 +25,16 @@ module top_module_tb;
     // outputs from the DUT
     wire       video_on, h_sync, v_sync;
     wire [2:0] rgb;
-    
+    wire [1:0] btn;
     //reg tick;
     
     // calls DUT
     top_module tm(.clk(clk), 
                   .reset(reset), 
                   .rgb(rgb), 
+                  .btn(btn),
                   .h_sync(h_sync), 
-                  .v_sync(v_sync),
-                  .video_on(video_on)
+                  .v_sync(v_sync)
                   );
                   
 //   tick = tm.pg.tick;               

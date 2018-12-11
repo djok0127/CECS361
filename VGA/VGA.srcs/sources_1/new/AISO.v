@@ -29,6 +29,6 @@ module AISO(reset, clk, reset_sync);
 	end
     
     // vivado uses negative logic for the reset. 
-	assign reset_sync = Q2;
+	assign reset_sync = ~Q2;
 	
 endmodule

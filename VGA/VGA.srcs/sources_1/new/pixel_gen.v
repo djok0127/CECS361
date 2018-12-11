@@ -15,26 +15,61 @@
  * from the class.
  *         
  ****************************************************************************/
-module pixel_gen( pixel_x, pixel_y, btn_up, btn_down, video_on, reset, clk, rgb);
+module pixel_gen( pixel_x, pixel_y, video_on, reset, clk, btn, rgb);
     input wire [9:0] pixel_x, pixel_y;
     input wire video_on;
-    input reset, clk, btn_up, btn_down;
+    input reset, clk;
+    input [1:0] btn;
     output reg [2:0] rgb;
     
-    wire wall_on, bar_on, ball_on;
-    wire [2:0] bar_rgb, wall_rgb, ball_rgb;
-    wire bar_top, bar_bot, bar_left, bar_right, bar_y_top;
+    //define the max pixel coordinates
+    localparam MAX_X = 640;
+    localparam MAX_Y = 480;
+        
+    //wall parameters
+    localparam WALL_X_L = 32;
+    localparam WALL_X_R = 35;
     
-    wire [9:0] ball_x_next, ball_y_next;
-    reg [9:0] x_delta_reg, x_delta_next, y_delta_reg, y_delta_next,
-              bar_y_next, bar_y_reg, ball_x_reg, ball_y_reg;     
+    //bar parameters
+    localparam BAR_X_L = 600;
+    localparam BAR_X_R = 603;
+        
+    //changing bar parameters
+    wire [9:0] bar_y_t, bar_y_b;
+    
+    // size of bar
+    localparam BAR_Y_SIZE = 72;
+    
+    reg [9:0] bar_y_reg, bar_y_next;
+    
+    localparam BAR_V = 4; 
+    
+    //variables to define the square ball
+    
+    localparam BALL_SIZE =8;
+    
+    wire [9:0]  ball_x_l , ball_x_r;
+    wire [9:0] ball_y_t, ball_y_b;
+    wire [9:0] ball_x_next , ball_y_next;
+    
+    reg [9:0] ball_x_reg, ball_y_reg;
+    reg [9:0] x_delta_reg, x_delta_next;
+    reg [9:0] y_delta_reg, y_delta_next;
+    
+    wire wall_on, bar_on, ball_on;
+    wire [2:0] wall_rgb, bar_rgb, ball_rgb;
+        
+        
+    localparam BALL_V_P = 2;
+    localparam BALL_V_N = -2;
     
     // refresh every 60 hz
-    wire ref_tick = (pixel_y == 481) && (pixel_x==0);
+    wire ref_tick;
     
+    assign ref_tick = (pixel_y == 481) && (pixel_x == 0); 
     //------------------------- wall -------------------------
     // create wall on the left side four pixels wide
-    assign wall_on = (32 <= pixel_x) &&  (pixel_x <= 35);
+    assign wall_on = (WALL_X_L <= pixel_x) &&  (pixel_x <= WALL_X_R);
     
     // color wall red
     assign wall_rgb = 3'b001;
@@ -43,38 +78,32 @@ module pixel_gen( pixel_x, pixel_y, btn_up, btn_down, video_on, reset, clk, rgb)
 
     // set the bar to green
     assign bar_rgb = 3'b010;
-    assign bar_top = bar_y_reg ;
-    assign bar_bot =  bar_top + 72 -1;
-    assign bar_left = 600;
-    assign bar_right = 603;
-    
-    // create bar on the right side
-    assign bar_on = (bar_left <= pixel_x) && (pixel_x <= bar_right) && 
-                    (bar_top <= pixel_y) && (pixel_y <= bar_bot);
-    
+    //assign the values for bar
+    assign bar_y_t = bar_y_reg;
+    assign bar_y_b = bar_y_t + BAR_Y_SIZE -1;
+    assign bar_on = ((BAR_X_L <= pixel_x) && (pixel_x <= BAR_X_R) 
+                  && (bar_y_t <= pixel_y) && (pixel_y <= bar_y_b));
     // new bar position
     always @ (*) begin
         bar_y_next = bar_y_reg; // do not move
-        if(ref_tick)
-            if (btn_down & (bar_bot < (480 - 1 -4)))
-                bar_y_next = bar_y_reg + 4; // move down
-            else if (btn_up & (bar_top > 4))
-                bar_y_next = bar_y_reg - 4; // move up
-    end // end of always
-    
+        if(ref_tick) begin
+            if(btn[1] & (bar_y_b < (MAX_Y - 1 - BAR_V)))
+                bar_y_next = bar_y_reg + BAR_V;
+            else if( btn[0] & (bar_y_t > BAR_V))
+                bar_y_next = bar_y_reg - BAR_V;
+        end
+    end
     //------------------------- ball -------------------------
     // create the ball
-    //ball size is 8 pixels, 4 pixels radius
-    localparam BALL_SIZE = 8;
     
-    assign ball_left = ball_x_reg;
-    assign ball_right = ball_left - BALL_SIZE - 1;
-    assign ball_top = ball_y_reg;
-    assign ball_bot = ball_top - BALL_SIZE - 1;
+	assign ball_x_l = ball_x_reg;
+    assign ball_y_t = ball_y_reg;
+    assign ball_x_r = ball_x_l + BALL_SIZE - 1;
+    assign ball_y_b = ball_y_t + BALL_SIZE - 1;
     
     // create square ball
-    assign ball_on = (ball_left <= pixel_x) && (pixel_x <= ball_right) && 
-                     (ball_top <= pixel_y) && (pixel_y <= ball_bot);
+    assign ball_on = ((ball_x_l <= pixel_x) && (pixel_x <= ball_x_r) && 
+                      (ball_y_t <= pixel_y) && (pixel_y <= ball_y_b));
     
     // new ball position
     assign ball_x_next = (ref_tick) ? ball_x_reg + x_delta_reg: ball_x_reg;
@@ -84,18 +113,16 @@ module pixel_gen( pixel_x, pixel_y, btn_up, btn_down, video_on, reset, clk, rgb)
     always @ (*) begin
         x_delta_next = x_delta_reg;
         y_delta_next = y_delta_reg;
-        // reach top
-        if(ball_bot < 0) y_delta_next = 2;
-        // reach bottom
-        else if(ball_bot > (480 - 1)) y_delta_next = -2;
-        // reach wall
-        else if(ball_left <= 603) x_delta_next = 2;
-        // bounce back
-        else if((600 <= ball_right) && (ball_right <= 603) &&
-                (bar_top <= ball_bot) && (ball_top <= bar_bot))
-                x_delta_next = -2;
+        if(ball_y_t <1)
+            y_delta_next = BALL_V_P;
+        else if (ball_y_b > (MAX_Y -1))
+            y_delta_next = BALL_V_N;
+        else if (ball_x_l <= WALL_X_R)
+            x_delta_next = BALL_V_P;
+        else if ((BAR_X_L <= ball_x_r) && (ball_x_r <= BAR_X_R) && 
+                 (bar_y_t <= ball_y_b) && (ball_y_t <= bar_y_b))
+            x_delta_next = BALL_V_N;
     end // end of always
-    
     
     //set the ball color to blue
     assign ball_rgb = 3'b100;              
@@ -127,6 +154,6 @@ module pixel_gen( pixel_x, pixel_y, btn_up, btn_down, video_on, reset, clk, rgb)
             else if(wall_on) rgb = wall_rgb;
             // set rgb to 0 to show black
             else rgb = 3'b000;
-        end
-    end
+        end // end of else
+    end // end of always
 endmodule

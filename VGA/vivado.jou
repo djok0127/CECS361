@@ -2,12 +2,30 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Nov 14 20:22:48 2018
-# Process ID: 8400
-# Current directory: C:/Users/Chris/Documents/GitHub/CECS361/VGA
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4696 C:\Users\Chris\Documents\GitHub\CECS361\VGA\VGA.xpr
-# Log file: C:/Users/Chris/Documents/GitHub/CECS361/VGA/vivado.log
-# Journal file: C:/Users/Chris/Documents/GitHub/CECS361/VGA\vivado.jou
+# Start of session at: Mon Dec 10 10:57:54 2018
+# Process ID: 20608
+# Current directory: C:/Users/Chris/Desktop/Github/CECS361/VGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14100 C:\Users\Chris\Desktop\Github\CECS361\VGA\VGA.xpr
+# Log file: C:/Users/Chris/Desktop/Github/CECS361/VGA/vivado.log
+# Journal file: C:/Users/Chris/Desktop/Github/CECS361/VGA\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Chris/Documents/GitHub/CECS361/VGA/VGA.xpr
+open_project C:/Users/Chris/Desktop/Github/CECS361/VGA/VGA.xpr
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+set_property part xc7a100tcsg324-2 [current_project]
+update_ip_catalog
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+create_run synth_2 -flow {Vivado Synthesis 2018} -strategy {Vivado Synthesis Defaults} -report_strategy {Vivado Synthesis Default Reports}
+current_run [get_runs synth_2]
+set_property part xc7a100tcsg324-1 [current_project]
+update_ip_catalog
+launch_runs synth_2 -jobs 2
+wait_on_run synth_2
+reset_run synth_2
